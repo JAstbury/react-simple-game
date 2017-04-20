@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Square from './square';
 import _ from 'lodash';
 
-export default class SquareGrid extends Component {
+class SquareGrid extends Component {
   renderSquares() {
     var squares = [];
     for (var i = 0; i < this.props.squares; i++) {
@@ -19,3 +20,11 @@ export default class SquareGrid extends Component {
     );
   }
 };
+
+function mapStateToProps(state) {
+  return {
+    squares: state.squares
+  };
+}
+
+export default connect(mapStateToProps)(SquareGrid);

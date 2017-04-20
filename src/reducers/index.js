@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import SquaresReducer from './reducer_squares';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  squares: SquaresReducer,
 });
 
 export default rootReducer;
