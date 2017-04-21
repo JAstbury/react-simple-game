@@ -49,6 +49,26 @@ h1 {
   background-color: blue;
 }
 
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+.purple {
+  background-color: purple;
+}
+
 .square-content {
   margin-top: 45%;
 }

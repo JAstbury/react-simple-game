@@ -13,10 +13,15 @@ class Square extends Component {
     )
   }
 
+  getColour() {
+    var colors = ['blue', 'green', 'yellow', 'red', 'purple'];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
   render() {
     if (this.props.active == true) {
       return (
-        <div className="square active-square" onClick={() => this.props.selectSquare(this.props.squares, true)}>
+        <div className={'square ' + this.getColour()} onClick={() => this.props.selectSquare(this.props.squares, true)}>
         {this.renderSquare()}
         </div>
       )
