@@ -16,13 +16,13 @@ class Square extends Component {
   render() {
     if (this.props.active == true) {
       return (
-        <div className="square active-square" onClick={() => this.props.selectSquare()}>
+        <div className="square active-square" onClick={() => this.props.selectSquare(this.props.squares)}>
         {this.renderSquare()}
         </div>
       )
     } else {
       return (
-        <div className="square" onClick={() => this.props.selectSquare()}>
+        <div className="square" onClick={() => this.props.selectSquare(this.props.squares)}>
         {this.renderSquare()}
         </div>
       )
@@ -30,8 +30,14 @@ class Square extends Component {
   }
 };
 
+function mapStateToProps(state) {
+  return {
+    squares: state.squares,
+  };
+}
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({selectSquare: selectSquare }, dispatch )
 }
 
-export default connect(null, mapDispatchToProps)(Square);
+export default connect(mapStateToProps, mapDispatchToProps)(Square);

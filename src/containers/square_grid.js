@@ -6,7 +6,6 @@ import _ from 'lodash';
 class SquareGrid extends Component {
   renderSquares() {
     var squares = [];
-    console.log(this.props.squares);
     for (var i = 0; i < this.props.squares; i++) {
       if (this.props.activeSquare == i) {
         squares.push(<Square number={i} active={true} key={i}/>);

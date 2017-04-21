@@ -1,18 +1,18 @@
-export function selectSquare() {
+export function selectSquare(squares) {
   return {
-    type: 'SQUARE_SELECTED'
+    type: 'SQUARE_SELECTED',
+    payload: squares
   };
 }
-
 
 export function selectMode(mode) {
   return {
     type: 'MODE_SELECTED',
-    payload: selectSquares(mode)
+    payload: noOfSquares(mode)
   };
 }
 
-function selectSquares(mode) {
+function noOfSquares(mode) {
   switch(mode) {
     case "Easy":
         return 3
