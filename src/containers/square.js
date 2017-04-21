@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { selectSquare } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
-class SquareGrid extends Component {
+class Square extends Component {
   render() {
     return (
       <div className="square" onClick={() => this.props.selectSquare()}>
@@ -20,4 +20,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({selectSquare: selectSquare }, dispatch )
 }
 
-export default connect(null, mapDispatchToProps)(SquareGrid);
+export default connect(null, mapDispatchToProps)(Square);
