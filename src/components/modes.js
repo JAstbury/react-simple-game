@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 class Modes extends Component {
   render() {
     return (
-      <div>
+      <div className="buttons">
         <button type="button" className="btn btn-primary" onClick={() => this.props.selectMode("Easy")}>Easy</button>
         <button type="button" className="btn btn-primary" onClick={() => this.props.selectMode("Medium")}>Medium</button>
         <button type="button" className="btn btn-primary" onClick={() => this.props.selectMode("Hard")}>Hard</button>

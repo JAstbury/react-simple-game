@@ -4,6 +4,21 @@ html, body {
   height: 100%;
 }
 
+.buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40% ! important;
+  color: white ! important;
+}
+
+.btn-primary {
+  margin: 10px;
+}
+
 .game {
   margin: 0;
   width:100vw;
@@ -45,7 +60,7 @@ html, body {
 
 .counter-number {
   background-color: white;
-  width: 40%;
-  margin: 45% auto 45% auto;
+  width: 35%;
+  margin: 20% auto 90% auto;
   text-align: center;
 }
