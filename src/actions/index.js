@@ -1,7 +1,8 @@
-export function selectSquare(squares) {
+export function selectSquare(squares, isActive) {
   return {
     type: 'SQUARE_SELECTED',
-    payload: squares
+    payload: squares,
+    active: isActive
   };
 }
 

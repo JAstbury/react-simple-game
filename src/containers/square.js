@@ -16,13 +16,13 @@ class Square extends Component {
   render() {
     if (this.props.active == true) {
       return (
-        <div className="square active-square" onClick={() => this.props.selectSquare(this.props.squares)}>
+        <div className="square active-square" onClick={() => this.props.selectSquare(this.props.squares, true)}>
         {this.renderSquare()}
         </div>
       )
     } else {
       return (
-        <div className="square" onClick={() => this.props.selectSquare(this.props.squares)}>
+        <div className="square" onClick={() => this.props.selectSquare(this.props.squares, false)}>
         {this.renderSquare()}
         </div>
       )
