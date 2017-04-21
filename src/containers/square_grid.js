@@ -6,8 +6,13 @@ import _ from 'lodash';
 class SquareGrid extends Component {
   renderSquares() {
     var squares = [];
+    console.log(this.props.squares);
     for (var i = 0; i < this.props.squares; i++) {
-      squares.push(<Square number={i} key={i}/>);
+      if (this.props.activeSquare == i) {
+        squares.push(<Square number={i} active={true} key={i}/>);
+      } else {
+        squares.push(<Square number={i} active={false} key={i}/>);
+      }
     }
     return squares;
   }
@@ -23,7 +28,8 @@ class SquareGrid extends Component {
 
 function mapStateToProps(state) {
   return {
-    squares: state.squares
+    squares: state.squares,
+    activeSquare: state.activeSquare
   };
 }
 

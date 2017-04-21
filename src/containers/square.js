@@ -5,14 +5,28 @@ import { selectSquare } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 class Square extends Component {
-  render() {
+  renderSquare() {
     return (
-      <div className="square" onClick={() => this.props.selectSquare()}>
         <div className="square-content">
           {this.props.number}
         </div>
-      </div>
-    );
+    )
+  }
+
+  render() {
+    if (this.props.active == true) {
+      return (
+        <div className="square active-square" onClick={() => this.props.selectSquare()}>
+        {this.renderSquare()}
+        </div>
+      )
+    } else {
+      return (
+        <div className="square" onClick={() => this.props.selectSquare()}>
+        {this.renderSquare()}
+        </div>
+      )
+    }
   }
 };
 
